@@ -1,22 +1,37 @@
-.card-container {
-  display: flex;
-  flex-direction: column;
+.more-info-container {
+  width: 30%;
   background-color: #95dada;
   border: 1px solid grey;
   border-radius: 5px;
   padding: 25px;
-  cursor: pointer;
+  margin: auto;
   -moz-osx-font-smoothing: grayscale;
   backface-visibility: hidden;
   transform: translateZ(0);
   transition: transform 0.25s ease-out;
 }
 
-.card-container:hover {
+.more-info-container:hover {
   transform: scale(1.05);
 }
 
-.card-container a {
+.more-info-container img {
+  display: block;
+  margin: auto;
+}
+
+.more-info-container li {
+  margin: 1em;
+}
+
+button {
+  display: block;
+  margin: 2em auto;
+}
+
+a {
   text-decoration: none;
   color: black;
+  display: inline-block;
+  padding: 5px 15px;
 }

@@ -1,12 +1,20 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './card.styles.css';
 
-export const Card = props => {
+export const Card = ({ cat }) => {
   return(
     <div className="card-container">
-      <img src={`https://robohash.org/${props.monster.id}?set=set2&size=180x180`} alt="monster"/>
-      <h2>{props.monster.name}</h2>
-      <p>{props.monster.email}</p>
+      <Link to={{ 
+        pathname: `/cats-owner-info/${cat.id}`, 
+        state: {
+          moreInfo: cat
+        }
+      }}>
+        <img src={`https://robohash.org/${cat.id}?set=set4&size=150x150`} alt="cat"/>
+        <h2>{cat.name}</h2>
+        <p>{cat.email}</p>
+      </Link>
     </div>
   );
 }
